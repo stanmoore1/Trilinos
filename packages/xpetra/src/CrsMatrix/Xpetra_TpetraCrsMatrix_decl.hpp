@@ -399,16 +399,7 @@ namespace Xpetra {
     void removeEmptyProcessesInPlace (const Teuchos::RCP<const Map<LocalOrdinal, GlobalOrdinal, Node> >& newMap);
 
     // @}
-#ifdef XPETRA_ENABLE_DEPRECATED_CODE
-    template<class Node2>
-    RCP<CrsMatrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> > XPETRA_DEPRECATED
-    clone (const RCP<Node2> &node2) const
-    {
-      return RCP<CrsMatrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> > (new TpetraCrsMatrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> (mtx_->clone (node2)));
-    }
-#endif
-
-    //! @name Xpetra specific
+//! @name Xpetra specific
     //@{
 
     //! Does this have an underlying matrix
@@ -804,12 +795,7 @@ namespace Xpetra {
     void removeEmptyProcessesInPlace (const Teuchos::RCP<const Map<LocalOrdinal, GlobalOrdinal, Node> >& newMap) {   }
 
     // @}
-#ifdef XPETRA_ENABLE_DEPRECATED_CODE
-    template<class Node2>
-    RCP<CrsMatrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> > XPETRA_DEPRECATED
-    clone (const RCP<Node2> &node2) const {  return Teuchos::null;  }
-#endif
-    //! @name Xpetra specific
+//! @name Xpetra specific
     //@{
 
     //! Does this have an underlying matrix
@@ -1200,12 +1186,7 @@ namespace Xpetra {
     void removeEmptyProcessesInPlace (const Teuchos::RCP<const Map<LocalOrdinal, GlobalOrdinal, Node> >& newMap) {   }
 
     // @}
-#ifdef XPETRA_ENABLE_DEPRECATED_CODE
-    template<class Node2>
-    RCP<CrsMatrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> > XPETRA_DEPRECATED
-    clone (const RCP<Node2> &node2) const {  return Teuchos::null;  }
-#endif
-    //! @name Xpetra specific
+//! @name Xpetra specific
     //@{
 
     //! Does this have an underlying matrix

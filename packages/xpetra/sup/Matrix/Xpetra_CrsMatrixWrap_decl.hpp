@@ -469,11 +469,6 @@ public:
   RCP<CrsMatrix> getCrsMatrix() const;
 
   //@}
-#ifdef XPETRA_ENABLE_DEPRECATED_CODE
-  template<class Node2>
-  RCP<Xpetra::Matrix<Scalar,LocalOrdinal,GlobalOrdinal,Node2> > XPETRA_DEPRECATED clone(const RCP<Node2> &node2) const;
-#endif
-
 private:
 
   // Default view is created after fillComplete()

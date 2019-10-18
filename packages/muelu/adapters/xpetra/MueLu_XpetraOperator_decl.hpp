@@ -131,16 +131,7 @@ namespace MueLu {
     //! Indicates whether this operator supports applying the adjoint operator.
     bool hasTransposeApply() const { return false; }
 
-#ifdef HAVE_MUELU_DEPRECATED_CODE
-    template <class NewNode>
-    Teuchos::RCP< XpetraOperator<Scalar, LocalOrdinal, GlobalOrdinal, NewNode> >
-    MUELU_DEPRECATED
-    clone(const RCP<NewNode>& new_node) const {
-      return Teuchos::rcp (new XpetraOperator<Scalar, LocalOrdinal, GlobalOrdinal, NewNode> (Hierarchy_->template clone<NewNode> (new_node)));
-    }
-#endif
-
-    //! @name MueLu specific
+//! @name MueLu specific
     //@{
 
     //! Direct access to the underlying MueLu::Hierarchy.
